@@ -1,3 +1,15 @@
+# Documentation
+1. git clone the rails app and do a bundle install
+2. rake db:create
+3. rake db:migrate
+4. rails s
+5. Sign up by creating a new user (eg: email: test@ls.com & password: 123123)
+6. Upload sample tab delimited file (Inbox Page)
+7. File is processed, appropriate entries are stored in the database and gross revenue is displayed
+
+Note: 
+Used the carrierwave gem to upload files (Have not specified any constraints such as file type/size as none were mentioned in problem description)
+
 # Challenge for Software Engineer - Big Data 
 To better assess a candidates development skills, we would like to provide the following challenge.  You have as much time as you'd like (though we ask that you not spend more than a few hours).
 
