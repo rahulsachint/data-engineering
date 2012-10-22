@@ -5,6 +5,20 @@
 			<%= gravatar_for @user %>
 			<%= @user.name %>
 			</h1>
+      
+      <%= form_for @user, :html => {:multipart => true} do |f| %>
+        <div class="field">
+        <p>
+          <label>My Datafile</label>
+          <%= f.file_field :datafile %>
+        </p>
+        </div>
+        <div class="actions">
+          <%= f.submit "Upload" %>
+        </div>
+          
+      <% end %>
+      
 		</td>
 
 		<td class="sidebar round">

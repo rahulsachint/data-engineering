@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120718232342) do
+ActiveRecord::Schema.define(:version => 20121022100053) do
+
+  create_table "items", :force => true do |t|
+    t.string   "purchaser_name"
+    t.string   "item_description"
+    t.decimal  "item_price"
+    t.decimal  "purchase_count"
+    t.string   "merchant_address"
+    t.string   "merchant_name"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
@@ -20,6 +31,8 @@ ActiveRecord::Schema.define(:version => 20120718232342) do
     t.datetime "updated_at",         :null => false
     t.string   "encrypted_password"
     t.string   "salt"
+    t.string   "datafile"
+    t.decimal  "gross_revenue"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
